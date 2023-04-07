@@ -1,0 +1,22 @@
+.box {
+
+    background-color: #741e1e;
+    margin: 5px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.box-remove {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.box-remove:hover {
+    color: red;
+}
