@@ -26,7 +26,7 @@ const TodoList = () => {
     function removeTodo(id) {
         setlistOfTodos(listOfTodos.filter(tood => (tood.id !== id)))
     }
-    function todoisDone(id) {
+    function isDone(id) {
         setlistOfTodos(listOfTodos.map(listItem => {
             console.log(listItem)
             console.log(id)
@@ -38,7 +38,9 @@ const TodoList = () => {
     }
     return (<>
         <TodoForm formState={formData} submitTodoForm={submitTodoForm} updateFormState={updateFormState} />
-        {listOfTodos.map(todo => <Todo task={todo} id={todo.id} key={todo.id} removeTodo={removeTodo} state={todoisDone} />)}
+        <ul>
+            {listOfTodos.map(todo => <Todo task={todo} id={todo.id} key={todo.id} removeTodo={removeTodo} isDone={isDone} />)}
+        </ul>
     </>)
 }
 export default TodoList;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const Todo = ({ task, removeTodo, state, id }) => {
+const Todo = ({ task, removeTodo, isDone, id }) => {
     const [isHovered, setIsHovered] = useState(false);
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -20,7 +20,7 @@ const Todo = ({ task, removeTodo, state, id }) => {
         >
             {task.todo.toUpperCase()}
             {isHovered && task.state === 'incomplete' ?
-                <button data-testid="todo-remove" className="todo-remove" type='button' onClick={() => state(id)}>done</button> : null}
+                <button data-testid="is-done" className="todo-remove" type='button' onClick={() => isDone(id)}>done</button> : null}
             {isHovered && <button data-testid="todo-remove" className="todo-remove" type='button' onClick={() => removeTodo(id)}>X</button>}
         </li >)
 }
