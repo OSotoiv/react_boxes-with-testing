@@ -17,6 +17,7 @@ exports[`matches snapshot 1`] = `
       value=""
     />
     <button
+      data-testid="submit-todo-btn"
       type="submit"
     >
       Submit

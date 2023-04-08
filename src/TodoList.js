@@ -28,8 +28,6 @@ const TodoList = () => {
     }
     function isDone(id) {
         setlistOfTodos(listOfTodos.map(listItem => {
-            console.log(listItem)
-            console.log(id)
             if (listItem.id === id) {
                 listItem.state = 'done'
             }

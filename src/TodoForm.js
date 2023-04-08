@@ -5,7 +5,7 @@ const TodoForm = ({ submitTodoForm, updateFormState, formState }) => {
         <form onSubmit={submitTodoForm}>
             <label htmlFor="todo">Todo:</label>
             <input autoFocus onChange={updateFormState} value={formState.todo} type="text" id="todo" name="todo" placeholder="Enter todo" required />
-            <button type="submit">Submit</button>
+            <button data-testid='submit-todo-btn' type="submit">Submit</button>
         </form>
     </>)
 }
